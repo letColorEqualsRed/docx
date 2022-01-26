@@ -1,7 +1,9 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { RelationshipsAttributes } from "./attributes";
 import { Relationship, RelationshipType, TargetModeType } from "./relationship/relationship";
 
+@RegisterXmlComponent("Relationships")
 export class Relationships extends XmlComponent {
     constructor() {
         super("Relationships");

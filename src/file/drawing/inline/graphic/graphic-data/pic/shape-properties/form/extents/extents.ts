@@ -1,7 +1,9 @@
 // http://officeopenxml.com/drwSp-size.php
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { ExtentsAttributes } from "./extents-attributes";
 
+@RegisterXmlComponent("Extents")
 export class Extents extends XmlComponent {
     private readonly attributes: ExtentsAttributes;
 

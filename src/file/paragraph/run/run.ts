@@ -1,4 +1,5 @@
 // http://officeopenxml.com/WPtext.php
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { FootnoteReferenceRun } from "file/footnotes/footnote/run/reference-run";
@@ -21,6 +22,7 @@ export enum PageNumber {
     TOTAL_PAGES_IN_SECTION = "TOTAL_PAGES_IN_SECTION",
 }
 
+@RegisterXmlComponent("Run")
 export class Run extends XmlComponent {
     protected readonly properties: RunProperties;
 

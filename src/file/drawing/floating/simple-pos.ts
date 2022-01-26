@@ -1,4 +1,5 @@
 // http://officeopenxml.com/drwPicFloating-position.php
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 class SimplePosAttributes extends XmlAttributeComponent<{
@@ -11,6 +12,7 @@ class SimplePosAttributes extends XmlAttributeComponent<{
     };
 }
 
+@RegisterXmlComponent("SimplePos")
 export class SimplePos extends XmlComponent {
     constructor() {
         super("wp:simplePos");

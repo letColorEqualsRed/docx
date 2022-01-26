@@ -1,4 +1,5 @@
 // http://officeopenxml.com/drwPicFloating-textWrap.php
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 import { IMargins } from "../floating";
@@ -13,6 +14,7 @@ class WrapTightAttributes extends XmlAttributeComponent<{
     };
 }
 
+@RegisterXmlComponent("WrapTight")
 export class WrapTight extends XmlComponent {
     constructor(
         margins: IMargins = {

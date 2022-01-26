@@ -1,5 +1,6 @@
 import { IParagraphStylePropertiesOptions } from "file/paragraph/properties";
 import { IRunStylePropertiesOptions } from "file/paragraph/run/properties";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { ParagraphPropertiesDefaults } from "./paragraph-properties";
 import { RunPropertiesDefaults } from "./run-properties";
@@ -9,6 +10,7 @@ export interface IDocumentDefaultsOptions {
     readonly run?: IRunStylePropertiesOptions;
 }
 
+@RegisterXmlComponent("DocumentDefaults")
 export class DocumentDefaults extends XmlComponent {
     private readonly runPropertiesDefaults: RunPropertiesDefaults;
     private readonly paragraphPropertiesDefaults: ParagraphPropertiesDefaults;

@@ -1,5 +1,7 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { Attributes, XmlComponent } from "file/xml-components";
 
+@RegisterXmlComponent("NumberProperties")
 export class NumberProperties extends XmlComponent {
     constructor(numberId: number | string, indentLevel: number) {
         super("w:numPr");

@@ -1,5 +1,6 @@
 // http://officeopenxml.com/WPindentation.php
 import { signedTwipsMeasureValue, twipsMeasureValue } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 export interface IIndentAttributesProperties {
@@ -40,6 +41,7 @@ class IndentAttributes extends XmlAttributeComponent<IIndentAttributesProperties
 // <xsd:sequence>
 //     ...
 //     <xsd:element name="ind" type="CT_Ind" minOccurs="0"/>
+@RegisterXmlComponent("Indent")
 export class Indent extends XmlComponent {
     constructor({ start, end, left, right, hanging, firstLine }: IIndentAttributesProperties) {
         super("w:ind");

@@ -1,4 +1,5 @@
 // http://officeopenxml.com/WPfooters.php
+import { RegisterXmlComponent } from "converter/decorators"
 import { InitializableXmlComponent, XmlComponent } from "file/xml-components";
 import { Paragraph } from "../paragraph";
 import { Table } from "../table";

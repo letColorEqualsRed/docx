@@ -1,4 +1,5 @@
 import { decimalNumber } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // not implemented
@@ -37,6 +38,7 @@ export class DocGridAttributes extends XmlAttributeComponent<IDocGridAttributesP
     };
 }
 
+@RegisterXmlComponent("DocumentGrid")
 export class DocumentGrid extends XmlComponent {
     constructor(linePitch: number, charSpace?: number, type?: DocumentGridType) {
         super("w:docGrid");

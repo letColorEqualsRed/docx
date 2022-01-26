@@ -1,5 +1,6 @@
 // http://officeopenxml.com/WPtableGrid.php
 import { Paragraph } from "file/paragraph";
+import { RegisterXmlComponent } from "converter/decorators"
 import { IContext, IXmlableObject, XmlComponent } from "file/xml-components";
 
 import { Table } from "../table";
@@ -9,6 +10,7 @@ export interface ITableCellOptions extends ITableCellPropertiesOptions {
     readonly children: (Paragraph | Table)[];
 }
 
+@RegisterXmlComponent("TableCell")
 export class TableCell extends XmlComponent {
     constructor(readonly options: ITableCellOptions) {
         super("w:tc");

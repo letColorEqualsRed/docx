@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { Attributes, XmlComponent } from "file/xml-components";
 
 export enum EmphasisMarkType {

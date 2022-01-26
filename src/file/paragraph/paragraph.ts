@@ -2,6 +2,7 @@
 
 import { uniqueId } from "convenience-functions";
 import { FootnoteReferenceRun } from "file/footnotes/footnote/run/reference-run";
+import { RegisterXmlComponent } from "converter/decorators"
 import { IContext, IXmlableObject, XmlComponent } from "file/xml-components";
 
 import { TargetModeType } from "../relationships/relationship/relationship";
@@ -34,6 +35,7 @@ export interface IParagraphOptions extends IParagraphPropertiesOptions {
     readonly children?: ParagraphChild[];
 }
 
+@RegisterXmlComponent("Paragraph")
 export class Paragraph extends XmlComponent {
     private readonly properties: ParagraphProperties;
 

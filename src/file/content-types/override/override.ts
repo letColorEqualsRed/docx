@@ -1,6 +1,8 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { OverrideAttributes } from "./override-attributes";
 
+@RegisterXmlComponent("Override")
 export class Override extends XmlComponent {
     constructor(contentType: string, partName?: string) {
         super("Override");

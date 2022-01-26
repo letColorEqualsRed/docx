@@ -1,4 +1,5 @@
 // http://officeopenxml.com/drwPicFloating-position.php
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 import { Align } from "./align";
 import { IVerticalPositionOptions, VerticalPositionRelativeFrom } from "./floating-position";
@@ -12,6 +13,7 @@ class VerticalPositionAttributes extends XmlAttributeComponent<{
     };
 }
 
+@RegisterXmlComponent("VerticalPosition")
 export class VerticalPosition extends XmlComponent {
     constructor(verticalPosition: IVerticalPositionOptions) {
         super("wp:positionV");

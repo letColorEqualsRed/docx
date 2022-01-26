@@ -1,6 +1,7 @@
 // http://officeopenxml.com/WPparagraph-textFrames.php
 import { HeightRule } from "file";
 import { HorizontalPositionAlign, VerticalPositionAlign } from "file/shared/alignment";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 export enum DropCapType {
@@ -86,6 +87,7 @@ export class FramePropertiesAttributes extends XmlAttributeComponent<{
     };
 }
 
+@RegisterXmlComponent("FrameProperties")
 export class FrameProperties extends XmlComponent {
     constructor(options: IFrameOptions) {
         super("w:framePr");

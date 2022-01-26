@@ -1,4 +1,5 @@
 import { twipsMeasureValue } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // <xsd:complexType name="CT_Height">
@@ -29,6 +30,7 @@ export class TableRowHeightAttributes extends XmlAttributeComponent<{
     protected readonly xmlKeys = { value: "w:val", rule: "w:hRule" };
 }
 
+@RegisterXmlComponent("TableRowHeight")
 export class TableRowHeight extends XmlComponent {
     constructor(value: number | string, rule: HeightRule) {
         super("w:trHeight");

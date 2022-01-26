@@ -1,5 +1,6 @@
 // http://officeopenxml.com/WPborders.php
 import { BorderElement, BorderStyle, IBorderOptions } from "file/border";
+import { RegisterXmlComponent } from "converter/decorators"
 import { IgnoreIfEmptyXmlComponent, XmlComponent } from "file/xml-components";
 
 export interface IBordersOptions {
@@ -31,6 +32,7 @@ export class Border extends IgnoreIfEmptyXmlComponent {
     }
 }
 
+@RegisterXmlComponent("ThematicBreak")
 export class ThematicBreak extends XmlComponent {
     constructor() {
         super("w:pBdr");

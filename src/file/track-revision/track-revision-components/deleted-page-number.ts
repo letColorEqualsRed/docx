@@ -1,10 +1,12 @@
 import { SpaceType } from "file/space-type";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 class TextAttributes extends XmlAttributeComponent<{ readonly space: SpaceType }> {
     protected readonly xmlKeys = { space: "xml:space" };
 }
 
+@RegisterXmlComponent("DeletedPage")
 export class DeletedPage extends XmlComponent {
     constructor() {
         super("w:delInstrText");
@@ -13,6 +15,7 @@ export class DeletedPage extends XmlComponent {
     }
 }
 
+@RegisterXmlComponent("DeletedNumberOfPages")
 export class DeletedNumberOfPages extends XmlComponent {
     constructor() {
         super("w:delInstrText");
@@ -21,6 +24,7 @@ export class DeletedNumberOfPages extends XmlComponent {
     }
 }
 
+@RegisterXmlComponent("DeletedNumberOfPagesSection")
 export class DeletedNumberOfPagesSection extends XmlComponent {
     constructor() {
         super("w:delInstrText");

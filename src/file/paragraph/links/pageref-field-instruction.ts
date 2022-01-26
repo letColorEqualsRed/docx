@@ -1,4 +1,5 @@
 import { SpaceType } from "file/space-type";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 import { IPageReferenceOptions } from "./pageref-properties";
 
@@ -6,6 +7,7 @@ class TextAttributes extends XmlAttributeComponent<{ readonly space: SpaceType }
     protected readonly xmlKeys = { space: "xml:space" };
 }
 
+@RegisterXmlComponent("PageReferenceFieldInstruction")
 export class PageReferenceFieldInstruction extends XmlComponent {
     constructor(bookmarkId: string, options: IPageReferenceOptions = {}) {
         super("w:instrText");

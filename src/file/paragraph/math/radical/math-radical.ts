@@ -1,4 +1,5 @@
 // http://www.datypic.com/sc/ooxml/e-m_rad-1.html
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { MathComponent } from "../math-component";
@@ -11,6 +12,7 @@ export interface IMathRadicalOptions {
     readonly degree?: MathComponent[];
 }
 
+@RegisterXmlComponent("MathRadical")
 export class MathRadical extends XmlComponent {
     constructor(options: IMathRadicalOptions) {
         super("m:rad");

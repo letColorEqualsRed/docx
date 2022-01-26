@@ -1,6 +1,7 @@
 // http://officeopenxml.com/drwSp-size.php
 // http://officeopenxml.com/drwSp-rotate.php
 import { IMediaDataTransformation } from "file/media";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 import { Extents } from "./extents/extents";
@@ -18,6 +19,7 @@ export class FormAttributes extends XmlAttributeComponent<{
     };
 }
 
+@RegisterXmlComponent("Form")
 export class Form extends XmlComponent {
     private readonly extents: Extents;
 

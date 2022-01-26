@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { OnOffElement, XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 import { Compatibility } from "./compatibility";
@@ -153,6 +154,7 @@ export interface ISettingsOptions {
     readonly updateFields?: boolean;
 }
 
+@RegisterXmlComponent("Settings")
 export class Settings extends XmlComponent {
     constructor(options: ISettingsOptions) {
         super("w:settings");

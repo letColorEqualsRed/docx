@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 class SymbolAttributes extends XmlAttributeComponent<{
@@ -10,6 +11,7 @@ class SymbolAttributes extends XmlAttributeComponent<{
     };
 }
 
+@RegisterXmlComponent("Symbol")
 export class Symbol extends XmlComponent {
     constructor(char: string = "", symbolfont: string = "Wingdings") {
         super("w:sym");

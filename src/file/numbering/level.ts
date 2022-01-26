@@ -1,5 +1,6 @@
 // http://officeopenxml.com/WPnumbering-numFmt.php
 import { decimalNumber } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { Attributes, NumberValueElement, XmlAttributeComponent, XmlComponent } from "file/xml-components";
 import { AlignmentType } from "../paragraph/formatting";
 import { ILevelParagraphStylePropertiesOptions, ParagraphProperties } from "../paragraph/properties";
@@ -132,6 +133,7 @@ class Suffix extends XmlComponent {
 //     <xsd:attribute name="tplc" type="ST_LongHexNumber" use="optional"/>
 //     <xsd:attribute name="tentative" type="s:ST_OnOff" use="optional"/>
 // </xsd:complexType>
+@RegisterXmlComponent("LevelBase")
 export class LevelBase extends XmlComponent {
     private readonly paragraphProperties: ParagraphProperties;
     private readonly runProperties: RunProperties;

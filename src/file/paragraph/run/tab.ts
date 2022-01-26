@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 // <xsd:group name="EG_RunInnerContent">
@@ -6,6 +7,7 @@ import { XmlComponent } from "file/xml-components";
 //
 // TODO: this is unused and undocumented currently.
 // I think the intended use was for users to import, and insert as a child of `Run`.
+@RegisterXmlComponent("Tab")
 export class Tab extends XmlComponent {
     constructor() {
         super("w:tab");

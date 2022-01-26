@@ -1,6 +1,7 @@
 // http://officeopenxml.com/WPSectionPgNumType.php
 import { NumberFormat } from "file/shared/number-format";
 import { decimalNumber } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // <xsd:simpleType name="ST_ChapterSep">
@@ -40,6 +41,7 @@ export class PageNumberTypeAttributes extends XmlAttributeComponent<IPageNumberT
         separator: "w:chapSep",
     };
 }
+@RegisterXmlComponent("PageNumberType")
 export class PageNumberType extends XmlComponent {
     constructor({ start, formatType, separator }: IPageNumberTypeAttributes) {
         super("w:pgNumType");

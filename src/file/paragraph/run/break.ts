@@ -1,4 +1,5 @@
 // http://officeopenxml.com/WPtextSpecialContent-break.php
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 // <xsd:group name="EG_RunInnerContent">
@@ -25,6 +26,7 @@ import { XmlComponent } from "file/xml-components";
 //   <xsd:enumeration value="all"/>
 // </xsd:restriction>
 // </xsd:simpleType>
+@RegisterXmlComponent("Break")
 export class Break extends XmlComponent {
     constructor() {
         super("w:br");

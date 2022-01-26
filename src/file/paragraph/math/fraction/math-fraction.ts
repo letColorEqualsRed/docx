@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { MathComponent } from "../math-component";
@@ -9,6 +10,7 @@ export interface IMathFractionOptions {
     readonly denominator: MathComponent[];
 }
 
+@RegisterXmlComponent("MathFraction")
 export class MathFraction extends XmlComponent {
     constructor(options: IMathFractionOptions) {
         super("m:f");

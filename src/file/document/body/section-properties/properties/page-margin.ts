@@ -1,4 +1,5 @@
 import { signedTwipsMeasureValue, twipsMeasureValue } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // <xsd:complexType name="CT_PageMar">
@@ -32,6 +33,7 @@ export class PageMarginAttributes extends XmlAttributeComponent<IPageMarginAttri
     };
 }
 
+@RegisterXmlComponent("PageMargin")
 export class PageMargin extends XmlComponent {
     constructor(
         top: number | string,

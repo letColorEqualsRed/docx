@@ -1,5 +1,6 @@
 // http://officeopenxml.com/drwPicFloating.php
 import { IMediaData, IMediaDataTransformation } from "file/media";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { IDrawingOptions } from "../drawing";
 import { HorizontalPosition, IFloating, SimplePos, VerticalPosition } from "../floating";
@@ -36,6 +37,7 @@ import { AnchorAttributes } from "./anchor-attributes";
 //     <xsd:attribute name="hidden" type="xsd:boolean" use="optional"/>
 //     <xsd:attribute name="allowOverlap" type="xsd:boolean" use="required"/>
 // </xsd:complexType>
+@RegisterXmlComponent("Anchor")
 export class Anchor extends XmlComponent {
     constructor(mediaData: IMediaData, transform: IMediaDataTransformation, drawingOptions: IDrawingOptions) {
         super("wp:anchor");

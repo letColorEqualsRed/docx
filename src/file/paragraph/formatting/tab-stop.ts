@@ -1,6 +1,8 @@
 // http://officeopenxml.com/WPtab.php
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
+@RegisterXmlComponent("TabStop")
 export class TabStop extends XmlComponent {
     constructor(type: TabStopType, position: number, leader?: LeaderType) {
         super("w:tabs");
@@ -40,6 +42,7 @@ export class TabAttributes extends XmlAttributeComponent<{
     protected readonly xmlKeys = { val: "w:val", pos: "w:pos", leader: "w:leader" };
 }
 
+@RegisterXmlComponent("TabStopItem")
 export class TabStopItem extends XmlComponent {
     constructor(value: TabStopType, position: string | number, leader?: LeaderType) {
         super("w:tab");

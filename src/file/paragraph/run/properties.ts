@@ -2,6 +2,7 @@ import { ChangeAttributes, IChangedAttributesProperties } from "../../track-revi
 
 import { BorderElement, IBorderOptions } from "file/border";
 import { IShadingAttributesProperties, Shading } from "file/shading";
+import { RegisterXmlComponent } from "converter/decorators"
 import { HpsMeasureElement, IgnoreIfEmptyXmlComponent, OnOffElement, StringValueElement, XmlComponent } from "file/xml-components";
 import { EmphasisMark, EmphasisMarkType } from "./emphasis-mark";
 import { CharacterSpacing, Color, Highlight, HighlightComplexScript } from "./formatting";
@@ -222,6 +223,7 @@ export class RunProperties extends IgnoreIfEmptyXmlComponent {
     }
 }
 
+@RegisterXmlComponent("RunPropertiesChange")
 export class RunPropertiesChange extends XmlComponent {
     constructor(options: IRunPropertiesChangeOptions) {
         super("w:rPrChange");

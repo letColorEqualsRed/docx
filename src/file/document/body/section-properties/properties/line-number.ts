@@ -1,5 +1,6 @@
 // http://officeopenxml.com/WPsectionLineNumbering.php
 import { decimalNumber, twipsMeasureValue } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // <xsd:simpleType name="ST_LineNumberRestart">
@@ -38,6 +39,7 @@ export class LineNumberAttributes extends XmlAttributeComponent<ILineNumberAttri
     };
 }
 
+@RegisterXmlComponent("LineNumberType")
 export class LineNumberType extends XmlComponent {
     constructor({ countBy, start, restart, distance }: ILineNumberAttributes) {
         super("w:lnNumType");

@@ -1,4 +1,5 @@
 import { decimalNumber } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 import { ILevelsOptions, Level } from "./level";
@@ -29,6 +30,7 @@ class AbstractNumberingAttributes extends XmlAttributeComponent<{
     };
 }
 
+@RegisterXmlComponent("AbstractNumbering")
 export class AbstractNumbering extends XmlComponent {
     public readonly id: number;
 

@@ -2,6 +2,7 @@
 // https://stackoverflow.com/questions/58622437/purpose-of-abstractnum-and-numberinginstance
 import { convertInchesToTwip, uniqueNumericId } from "convenience-functions";
 import { AlignmentType } from "file/paragraph";
+import { RegisterXmlComponent } from "converter/decorators"
 import { IContext, IXmlableObject, XmlComponent } from "file/xml-components";
 
 import { DocumentAttributes } from "../document/document-attributes";
@@ -26,6 +27,7 @@ export interface INumberingOptions {
 //             <xsd:element name="numIdMacAtCleanup" type="CT_DecimalNumber" minOccurs="0"/>
 //         </xsd:sequence>
 //     </xsd:complexType>
+@RegisterXmlComponent("Numbering")
 export class Numbering extends XmlComponent {
     private readonly abstractNumberingMap = new Map<string, AbstractNumbering>();
     private readonly concreteNumberingMap = new Map<string, ConcreteNumbering>();

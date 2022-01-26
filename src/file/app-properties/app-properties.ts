@@ -1,6 +1,8 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { AppPropertiesAttributes } from "./app-properties-attributes";
 
+@RegisterXmlComponent("AppProperties")
 export class AppProperties extends XmlComponent {
     constructor() {
         super("Properties");

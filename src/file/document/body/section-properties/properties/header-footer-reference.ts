@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // <xsd:simpleType name="ST_HdrFtr">
@@ -51,6 +52,7 @@ export enum HeaderFooterType {
     HEADER = "w:headerReference",
     FOOTER = "w:footerReference",
 }
+@RegisterXmlComponent("HeaderFooterReference")
 export class HeaderFooterReference extends XmlComponent {
     constructor(type: HeaderFooterType, options: IHeaderFooterOptions) {
         super(type);

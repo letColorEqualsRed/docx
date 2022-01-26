@@ -1,4 +1,5 @@
 // http://www.datypic.com/sc/ooxml/e-m_sSup-1.html
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { MathComponent } from "../../math-component";
@@ -10,6 +11,7 @@ export interface IMathSuperScriptOptions {
     readonly superScript: MathComponent[];
 }
 
+@RegisterXmlComponent("MathSuperScript")
 export class MathSuperScript extends XmlComponent {
     constructor(options: IMathSuperScriptOptions) {
         super("m:sSup");

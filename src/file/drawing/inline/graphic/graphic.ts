@@ -1,4 +1,5 @@
 import { IMediaData, IMediaDataTransformation } from "file/media";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 import { GraphicData } from "./graphic-data";
@@ -11,6 +12,7 @@ class GraphicAttributes extends XmlAttributeComponent<{
     };
 }
 
+@RegisterXmlComponent("Graphic")
 export class Graphic extends XmlComponent {
     private readonly data: GraphicData;
 

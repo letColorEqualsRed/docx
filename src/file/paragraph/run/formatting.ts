@@ -1,6 +1,8 @@
 import { hexColorValue, signedTwipsMeasureValue } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { Attributes, XmlComponent } from "file/xml-components";
 
+@RegisterXmlComponent("CharacterSpacing")
 export class CharacterSpacing extends XmlComponent {
     constructor(value: number | string) {
         super("w:spacing");
@@ -18,6 +20,7 @@ export class CharacterSpacing extends XmlComponent {
 //     <xsd:attribute name="themeTint" type="ST_UcharHexNumber" use="optional"/>
 //     <xsd:attribute name="themeShade" type="ST_UcharHexNumber" use="optional"/>
 // </xsd:complexType>
+@RegisterXmlComponent("Color")
 export class Color extends XmlComponent {
     constructor(color: string) {
         super("w:color");
@@ -50,6 +53,7 @@ export class Color extends XmlComponent {
 //         <xsd:enumeration value="none"/>
 //     </xsd:restriction>
 // </xsd:simpleType>
+@RegisterXmlComponent("Highlight")
 export class Highlight extends XmlComponent {
     constructor(color: string) {
         super("w:highlight");
@@ -61,6 +65,7 @@ export class Highlight extends XmlComponent {
     }
 }
 
+@RegisterXmlComponent("HighlightComplexScript")
 export class HighlightComplexScript extends XmlComponent {
     constructor(color: string) {
         super("w:highlightCs");

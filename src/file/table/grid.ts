@@ -10,8 +10,10 @@
 // </xsd:complexType>
 
 import { twipsMeasureValue } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
+@RegisterXmlComponent("TableGrid")
 export class TableGrid extends XmlComponent {
     constructor(widths: number[] | string[]) {
         super("w:tblGrid");
@@ -25,6 +27,7 @@ class GridColAttributes extends XmlAttributeComponent<{ readonly w: number | str
     protected readonly xmlKeys = { w: "w:w" };
 }
 
+@RegisterXmlComponent("GridCol")
 export class GridCol extends XmlComponent {
     constructor(width?: number | string) {
         super("w:gridCol");

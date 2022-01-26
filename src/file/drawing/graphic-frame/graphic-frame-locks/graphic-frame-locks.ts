@@ -1,6 +1,8 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { GraphicFrameLockAttributes } from "./graphic-frame-lock-attributes";
 
+@RegisterXmlComponent("GraphicFrameLocks")
 export class GraphicFrameLocks extends XmlComponent {
     constructor() {
         super("a:graphicFrameLocks");

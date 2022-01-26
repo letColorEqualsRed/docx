@@ -1,4 +1,5 @@
 import { signedTwipsMeasureValue, twipsMeasureValue } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 import { OverlapType, TableOverlap } from "./table-overlap";
@@ -143,6 +144,7 @@ export class TableFloatOptionsAttributes extends XmlAttributeComponent<ITableFlo
     };
 }
 
+@RegisterXmlComponent("TableFloatProperties")
 export class TableFloatProperties extends XmlComponent {
     constructor({
         leftFromText,

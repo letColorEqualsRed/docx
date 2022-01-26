@@ -1,5 +1,6 @@
 // http://officeopenxml.com/WPtableBorders.php
 import { BorderElement, BorderStyle, IBorderOptions } from "file/border";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 export interface ITableBordersOptions {
@@ -23,6 +24,7 @@ const DEFAULT_BORDER = {
     color: "auto",
 };
 
+@RegisterXmlComponent("TableBorders")
 export class TableBorders extends XmlComponent {
     public static readonly NONE = {
         top: NONE_BORDER,

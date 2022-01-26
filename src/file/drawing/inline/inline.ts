@@ -1,5 +1,6 @@
 // http://officeopenxml.com/drwPicInline.php
 import { IMediaData, IMediaDataTransformation } from "file/media";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { DocProperties } from "./../doc-properties/doc-properties";
 import { EffectExtent } from "./../effect-extent/effect-extent";
@@ -22,6 +23,7 @@ import { InlineAttributes } from "./inline-attributes";
 //     <xsd:attribute name="distL" type="ST_WrapDistance" use="optional"/>
 //     <xsd:attribute name="distR" type="ST_WrapDistance" use="optional"/>
 // </xsd:complexType>
+@RegisterXmlComponent("Inline")
 export class Inline extends XmlComponent {
     private readonly extent: Extent;
     private readonly graphic: Graphic;

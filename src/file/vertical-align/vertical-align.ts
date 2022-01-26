@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // <xsd:complexType name="CT_VerticalJc">
@@ -26,6 +27,7 @@ export class VerticalAlignAttributes extends XmlAttributeComponent<{
     };
 }
 
+@RegisterXmlComponent("VerticalAlignElement")
 export class VerticalAlignElement extends XmlComponent {
     constructor(value: VerticalAlign) {
         super("w:vAlign");

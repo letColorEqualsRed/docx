@@ -1,4 +1,5 @@
 import { IMediaData } from "file/media";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { Anchor } from "./anchor";
 import { IFloating } from "./floating";
@@ -22,6 +23,7 @@ export interface IDrawingOptions {
 // </xsd:choice>
 // </xsd:complexType>
 
+@RegisterXmlComponent("Drawing")
 export class Drawing extends XmlComponent {
     private readonly inline: Inline;
 

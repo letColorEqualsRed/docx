@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { BaseXmlComponent, IContext, IXmlableObject } from "file/xml-components";
 
 export class Formatter {

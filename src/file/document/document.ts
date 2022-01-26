@@ -1,4 +1,5 @@
 // http://officeopenxml.com/WPdocument.php
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { ConcreteHyperlink, Paragraph } from "../paragraph";
 import { Table } from "../table";
@@ -30,6 +31,7 @@ export interface IDocumentOptions {
 //         <xsd:element name="background" type="CT_Background" minOccurs="0"/>
 //     </xsd:sequence>
 // </xsd:complexType>
+@RegisterXmlComponent("Document")
 export class Document extends XmlComponent {
     private readonly body: Body;
 

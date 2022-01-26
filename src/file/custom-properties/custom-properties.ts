@@ -1,7 +1,9 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { IContext, IXmlableObject, XmlComponent } from "file/xml-components";
 import { CustomPropertiesAttributes } from "./custom-properties-attributes";
 import { CustomProperty, ICustomPropertyOptions } from "./custom-property";
 
+@RegisterXmlComponent("CustomProperties")
 export class CustomProperties extends XmlComponent {
     // tslint:disable-next-line:readonly-keyword
     private nextId: number;

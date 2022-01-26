@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { TableCell } from "../table-cell";
 import { ITableRowPropertiesOptions, TableRowProperties } from "./table-row-properties";
@@ -6,6 +7,7 @@ export interface ITableRowOptions extends ITableRowPropertiesOptions {
     readonly children: TableCell[];
 }
 
+@RegisterXmlComponent("TableRow")
 export class TableRow extends XmlComponent {
     constructor(private readonly options: ITableRowOptions) {
         super("w:tr");

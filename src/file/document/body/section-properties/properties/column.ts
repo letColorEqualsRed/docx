@@ -1,4 +1,5 @@
 import { twipsMeasureValue } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 export interface IColumnAttributes {
@@ -13,6 +14,7 @@ export class ColumnAttributes extends XmlAttributeComponent<IColumnAttributes> {
     };
 }
 
+@RegisterXmlComponent("Column")
 export class Column extends XmlComponent {
     constructor({ width, space }: IColumnAttributes) {
         super("w:col");

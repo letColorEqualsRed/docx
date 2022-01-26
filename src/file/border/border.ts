@@ -19,6 +19,7 @@
 //     <xsd:attribute name="shadow" type="s:ST_OnOff" use="optional"/>
 //     <xsd:attribute name="frame" type="s:ST_OnOff" use="optional"/>
 // </xsd:complexType>
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 import { eighthPointMeasureValue, hexColorValue, pointMeasureValue } from "../values";
 
@@ -32,6 +33,7 @@ export interface IBorderOptions {
     readonly space?: number;
 }
 
+@RegisterXmlComponent("BorderElement")
 export class BorderElement extends XmlComponent {
     constructor(elementName: string, { color, size, space, style }: IBorderOptions) {
         super(elementName);

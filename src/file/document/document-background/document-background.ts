@@ -1,6 +1,7 @@
 // http://officeopenxml.com/WPdocument.php
 // http://www.datypic.com/sc/ooxml/e-w_background-1.html
 import { hexColorValue, uCharHexNumber } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // <xsd:simpleType name="ST_ThemeColor">
@@ -62,6 +63,7 @@ export interface IDocumentBackgroundOptions {
 //     <xsd:attribute name="themeShade" type="ST_UcharHexNumber" use="optional"/>
 // </xsd:complexType>
 
+@RegisterXmlComponent("DocumentBackground")
 export class DocumentBackground extends XmlComponent {
     constructor(options: IDocumentBackgroundOptions) {
         super("w:background");

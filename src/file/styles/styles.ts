@@ -1,4 +1,5 @@
 import { IDefaultStylesOptions } from "file/styles/factory";
+import { RegisterXmlComponent } from "converter/decorators"
 import { BaseXmlComponent, ImportedXmlComponent, XmlComponent } from "file/xml-components";
 import { StyleForCharacter, StyleForParagraph } from "./style";
 import { ICharacterStyleOptions } from "./style/character-style";
@@ -19,6 +20,7 @@ export interface IStylesOptions {
 //   <xsd:element name="style" type="CT_Style" minOccurs="0" maxOccurs="unbounded"/>
 // </xsd:sequence>
 // </xsd:complexType>
+@RegisterXmlComponent("Styles")
 export class Styles extends XmlComponent {
     constructor(options: IStylesOptions) {
         super("w:styles");

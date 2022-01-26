@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { LineRuleType, Paragraph } from "../paragraph";
@@ -6,6 +7,7 @@ import { ContinuationSeperatorRun } from "./footnote/run/continuation-seperator-
 import { SeperatorRun } from "./footnote/run/seperator-run";
 import { FootnotesAttributes } from "./footnotes-attributes";
 
+@RegisterXmlComponent("FootNotes")
 export class FootNotes extends XmlComponent {
     constructor() {
         super("w:footnotes");

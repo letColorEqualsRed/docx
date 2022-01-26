@@ -1,5 +1,6 @@
 // tslint:disable:no-any
 import { Element as XmlElement, xml2js } from "xml-js";
+import { RegisterXmlComponent } from "converter/decorators"
 import { IXmlableObject, XmlAttributeComponent, XmlComponent } from ".";
 import { IContext } from "./base";
 
@@ -35,6 +36,7 @@ class ImportedXmlComponentAttributes extends XmlAttributeComponent<any> {
 /**
  * Represents imported xml component from xml file.
  */
+@RegisterXmlComponent("ImportedXmlComponent")
 export class ImportedXmlComponent extends XmlComponent {
     /**
      * Converts the xml string to a XmlComponent tree.
@@ -67,6 +69,7 @@ export class ImportedXmlComponent extends XmlComponent {
 /**
  * Used for the attributes of root element that is being imported.
  */
+@RegisterXmlComponent("ImportedRootElementAttributes")
 export class ImportedRootElementAttributes extends XmlComponent {
     // tslint:disable-next-line:variable-name
     constructor(private readonly _attr: any) {

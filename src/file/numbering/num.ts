@@ -1,4 +1,5 @@
 import { decimalNumber } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { Attributes, XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 class AbstractNumId extends XmlComponent {
@@ -40,6 +41,7 @@ export interface IConcreteNumberingOptions {
 //             </xsd:sequence>
 //             <xsd:attribute name="numId" type="ST_DecimalNumber" use="required"/>
 //         </xsd:complexType>
+@RegisterXmlComponent("ConcreteNumbering")
 export class ConcreteNumbering extends XmlComponent {
     public readonly numId: number;
     public readonly reference: string;
@@ -70,6 +72,7 @@ class LevelOverrideAttributes extends XmlAttributeComponent<{ readonly ilvl: num
     protected readonly xmlKeys = { ilvl: "w:ilvl" };
 }
 
+@RegisterXmlComponent("LevelOverride")
 export class LevelOverride extends XmlComponent {
     constructor(levelNum: number, start?: number) {
         super("w:lvlOverride");

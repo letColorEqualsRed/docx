@@ -1,4 +1,5 @@
 // http://www.datypic.com/sc/ooxml/e-m_sPre-1.html
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { MathComponent } from "../../math-component";
@@ -11,6 +12,7 @@ export interface IMathPreSubSuperScriptOptions {
     readonly superScript: MathComponent[];
 }
 
+@RegisterXmlComponent("MathPreSubSuperScript")
 export class MathPreSubSuperScript extends XmlComponent {
     constructor(options: IMathPreSubSuperScriptOptions) {
         super("m:sPre");

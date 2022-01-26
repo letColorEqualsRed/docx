@@ -3,12 +3,14 @@
 import { Paragraph } from "file/paragraph";
 import { Run } from "file/paragraph/run";
 import { Begin, End, Separate } from "file/paragraph/run/field";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { FieldInstruction } from "./field-instruction";
 import { StructuredDocumentTagContent } from "./sdt-content";
 import { StructuredDocumentTagProperties } from "./sdt-properties";
 import { ITableOfContentsOptions } from "./table-of-contents-properties";
 
+@RegisterXmlComponent("TableOfContents")
 export class TableOfContents extends XmlComponent {
     constructor(alias: string = "Table of Contents", properties?: ITableOfContentsOptions) {
         super("w:sdt");

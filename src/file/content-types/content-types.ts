@@ -1,8 +1,10 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { ContentTypeAttributes } from "./content-types-attributes";
 import { Default } from "./default/default";
 import { Override } from "./override/override";
 
+@RegisterXmlComponent("ContentTypes")
 export class ContentTypes extends XmlComponent {
     constructor() {
         super("Types");

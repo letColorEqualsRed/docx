@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 class FillRectangle extends XmlComponent {
@@ -6,6 +7,7 @@ class FillRectangle extends XmlComponent {
     }
 }
 
+@RegisterXmlComponent("Stretch")
 export class Stretch extends XmlComponent {
     constructor() {
         super("a:stretch");

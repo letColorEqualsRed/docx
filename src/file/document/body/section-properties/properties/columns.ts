@@ -1,4 +1,5 @@
 import { decimalNumber, twipsMeasureValue } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 import { Column } from "./column";
 
@@ -28,6 +29,7 @@ export class ColumnsAttributes extends XmlAttributeComponent<IColumnsAttributes>
     };
 }
 
+@RegisterXmlComponent("Columns")
 export class Columns extends XmlComponent {
     constructor({ space, count, separate, equalWidth, children }: IColumnsAttributes) {
         super("w:cols");

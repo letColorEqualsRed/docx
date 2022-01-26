@@ -1,6 +1,8 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { EffectExtentAttributes } from "./effect-extent-attributes";
 
+@RegisterXmlComponent("EffectExtent")
 export class EffectExtent extends XmlComponent {
     constructor() {
         super("wp:effectExtent");

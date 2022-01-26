@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { OnOffElement, XmlComponent } from "file/xml-components";
 import { CompatibilitySetting } from "./compatibility-setting/compatibility-setting";
 
@@ -78,6 +79,7 @@ export interface ICompatibilityOptions {
     readonly version?: number;
 }
 
+@RegisterXmlComponent("Compatibility")
 export class Compatibility extends XmlComponent {
     constructor(options: ICompatibilityOptions) {
         super("w:compat");

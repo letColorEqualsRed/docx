@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // <xsd:simpleType name="ST_TblOverlap">
@@ -18,6 +19,7 @@ class TableOverlapAttributes extends XmlAttributeComponent<{ readonly val: Overl
     protected readonly xmlKeys = { val: "w:val" };
 }
 
+@RegisterXmlComponent("TableOverlap")
 export class TableOverlap extends XmlComponent {
     constructor(type: OverlapType) {
         super("w:tblOverlap");

@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // <xsd:simpleType name="ST_TblLayoutType">
@@ -18,6 +19,7 @@ class TableLayoutAttributes extends XmlAttributeComponent<{ readonly type: Table
 // <xsd:complexType name="CT_TblLayoutType">
 //     <xsd:attribute name="type" type="ST_TblLayoutType"/>
 // </xsd:complexType>
+@RegisterXmlComponent("TableLayout")
 export class TableLayout extends XmlComponent {
     constructor(type: TableLayoutType) {
         super("w:tblLayout");

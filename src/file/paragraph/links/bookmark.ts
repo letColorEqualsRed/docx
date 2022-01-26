@@ -1,5 +1,6 @@
 // http://officeopenxml.com/WPbookmark.php
 import { uniqueNumericId } from "convenience-functions";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { ParagraphChild } from "../paragraph";
@@ -51,6 +52,7 @@ export class Bookmark {
 //   <xsd:attribute name="id" type="ST_DecimalNumber" use="required"/>
 // </xsd:complexType>
 
+@RegisterXmlComponent("BookmarkStart")
 export class BookmarkStart extends XmlComponent {
     constructor(id: string, linkId: number) {
         super("w:bookmarkStart");
@@ -63,6 +65,7 @@ export class BookmarkStart extends XmlComponent {
     }
 }
 
+@RegisterXmlComponent("BookmarkEnd")
 export class BookmarkEnd extends XmlComponent {
     constructor(linkId: number) {
         super("w:bookmarkEnd");

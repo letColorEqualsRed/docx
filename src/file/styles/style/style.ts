@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { OnOffElement, StringValueElement, XmlAttributeComponent, XmlComponent } from "file/xml-components";
 import { Name, UiPriority } from "./components";
 
@@ -59,6 +60,7 @@ class StyleAttributes extends XmlAttributeComponent<IStyleAttributes> {
     };
 }
 
+@RegisterXmlComponent("Style")
 export class Style extends XmlComponent {
     constructor(attributes: IStyleAttributes, options: IStyleOptions) {
         super("w:style");

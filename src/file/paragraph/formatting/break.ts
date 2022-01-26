@@ -1,4 +1,5 @@
 // http://officeopenxml.com/WPtextSpecialContent-break.php
+import { RegisterXmlComponent } from "converter/decorators"
 import { Attributes, XmlComponent } from "file/xml-components";
 import { Run } from "../run";
 
@@ -36,6 +37,7 @@ export class ColumnBreak extends Run {
 /**
  * Add page break before the paragraph if there is no one added before.
  */
+@RegisterXmlComponent("PageBreakBefore")
 export class PageBreakBefore extends XmlComponent {
     constructor() {
         super("w:pageBreakBefore");

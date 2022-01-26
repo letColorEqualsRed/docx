@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 export interface ILatentStyleExceptionAttributesProperties {
@@ -18,6 +19,7 @@ export class LatentStyleExceptionAttributes extends XmlAttributeComponent<ILaten
     };
 }
 
+@RegisterXmlComponent("LatentStyleException")
 export class LatentStyleException extends XmlComponent {
     constructor(attributes: ILatentStyleExceptionAttributesProperties) {
         super("w:lsdException");

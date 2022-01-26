@@ -1,4 +1,5 @@
 import { Run } from "file/paragraph/run";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 export class FootNoteReferenceRunAttributes extends XmlAttributeComponent<{
@@ -9,6 +10,7 @@ export class FootNoteReferenceRunAttributes extends XmlAttributeComponent<{
     };
 }
 
+@RegisterXmlComponent("FootnoteReference")
 export class FootnoteReference extends XmlComponent {
     constructor(id: number) {
         super("w:footnoteReference");

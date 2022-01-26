@@ -1,4 +1,5 @@
 import { IMediaData } from "file/media";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 class BlipAttributes extends XmlAttributeComponent<{
@@ -11,6 +12,7 @@ class BlipAttributes extends XmlAttributeComponent<{
     };
 }
 
+@RegisterXmlComponent("Blip")
 export class Blip extends XmlComponent {
     constructor(mediaData: IMediaData) {
         super("a:blip");

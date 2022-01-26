@@ -4,6 +4,7 @@
 import { FooterWrapper } from "file/footer-wrapper";
 import { HeaderWrapper } from "file/header-wrapper";
 import { VerticalAlign, VerticalAlignElement } from "file/vertical-align";
+import { RegisterXmlComponent } from "converter/decorators"
 import { OnOffElement, XmlComponent } from "file/xml-components";
 
 import { HeaderFooterReference, HeaderFooterReferenceType, HeaderFooterType } from "./properties/header-footer-reference";
@@ -91,6 +92,7 @@ export const sectionPageSizeDefaults = {
     ORIENTATION: PageOrientation.PORTRAIT,
 };
 
+@RegisterXmlComponent("SectionProperties")
 export class SectionProperties extends XmlComponent {
     constructor({
         page: {

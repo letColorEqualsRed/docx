@@ -1,4 +1,5 @@
 import { twipsMeasureValue } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // <xsd:simpleType name="ST_PageOrientation">
@@ -32,6 +33,7 @@ export class PageSizeAttributes extends XmlAttributeComponent<IPageSizeAttribute
     };
 }
 
+@RegisterXmlComponent("PageSize")
 export class PageSize extends XmlComponent {
     constructor(width: number | string, height: number | string, orientation: PageOrientation) {
         super("w:pgSz");

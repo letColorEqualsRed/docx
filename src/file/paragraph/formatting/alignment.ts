@@ -1,5 +1,6 @@
 // http://officeopenxml.com/WPalignment.php
 // http://officeopenxml.com/WPtableAlignment.php
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 export enum AlignmentType {
@@ -17,6 +18,7 @@ export class AlignmentAttributes extends XmlAttributeComponent<{ readonly val: A
     protected readonly xmlKeys = { val: "w:val" };
 }
 
+@RegisterXmlComponent("Alignment")
 export class Alignment extends XmlComponent {
     constructor(type: AlignmentType) {
         super("w:jc");

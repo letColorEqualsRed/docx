@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { StringContainer, XmlComponent } from "file/xml-components";
 import { ICustomPropertyOptions } from "../custom-properties";
 import { IDocumentBackgroundOptions } from "../document";
@@ -58,6 +59,7 @@ export interface IPropertiesOptions {
 //   </xs:all>
 // </xs:complexType>
 
+@RegisterXmlComponent("CoreProperties")
 export class CoreProperties extends XmlComponent {
     constructor(options: Omit<IPropertiesOptions, "sections">) {
         super("cp:coreProperties");

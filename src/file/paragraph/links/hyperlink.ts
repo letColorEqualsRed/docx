@@ -1,5 +1,6 @@
 // http://officeopenxml.com/WPhyperlink.php
 import { uniqueId } from "convenience-functions";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { ParagraphChild } from "../paragraph";
@@ -10,6 +11,7 @@ export enum HyperlinkType {
     EXTERNAL = "EXTERNAL",
 }
 
+@RegisterXmlComponent("ConcreteHyperlink")
 export class ConcreteHyperlink extends XmlComponent {
     public readonly linkId: string;
 

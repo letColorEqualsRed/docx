@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 export interface IFontAttributesProperties {
@@ -18,6 +19,7 @@ class RunFontAttributes extends XmlAttributeComponent<IFontAttributesProperties>
     };
 }
 
+@RegisterXmlComponent("RunFonts")
 export class RunFonts extends XmlComponent {
     constructor(name: string, hint?: string);
     constructor(attrs: string | IFontAttributesProperties);

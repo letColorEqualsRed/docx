@@ -1,4 +1,5 @@
 // http://www.datypic.com/sc/ooxml/e-m_nary-1.html
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { MathComponent } from "../math-component";
@@ -13,6 +14,7 @@ export interface IMathSumOptions {
     readonly superScript?: MathComponent[];
 }
 
+@RegisterXmlComponent("MathSum")
 export class MathSum extends XmlComponent {
     constructor(options: IMathSumOptions) {
         super("m:nary");

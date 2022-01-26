@@ -1,4 +1,5 @@
 // http://www.datypic.com/sc/ooxml/e-m_func-1.html
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { MathComponent } from "../math-component";
@@ -11,6 +12,7 @@ export interface IMathFunctionOptions {
     readonly name: MathComponent[];
 }
 
+@RegisterXmlComponent("MathFunction")
 export class MathFunction extends XmlComponent {
     constructor(options: IMathFunctionOptions) {
         super("m:func");

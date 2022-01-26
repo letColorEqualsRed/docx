@@ -1,5 +1,6 @@
 // http://officeopenxml.com/WPtableWidth.php
 import { measurementOrPercentValue } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // <xsd:simpleType name="ST_TblWidth">
@@ -34,6 +35,7 @@ class TableWidthAttributes extends XmlAttributeComponent<ITableWidthProperties> 
     protected readonly xmlKeys = { type: "w:type", size: "w:w" };
 }
 
+@RegisterXmlComponent("TableWidthElement")
 export class TableWidthElement extends XmlComponent {
     constructor(name: string, { type = WidthType.AUTO, size }: ITableWidthProperties) {
         super(name);

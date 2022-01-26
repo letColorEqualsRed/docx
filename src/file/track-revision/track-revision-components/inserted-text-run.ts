@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { IRunOptions, TextRun } from "../../index";
@@ -5,6 +6,7 @@ import { ChangeAttributes, IChangedAttributesProperties } from "../track-revisio
 
 interface IInsertedRunOptions extends IChangedAttributesProperties, IRunOptions {}
 
+@RegisterXmlComponent("InsertedTextRun")
 export class InsertedTextRun extends XmlComponent {
     constructor(options: IInsertedRunOptions) {
         super("w:ins");

@@ -1,4 +1,5 @@
 import { hexColorValue } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { Attributes, XmlComponent } from "file/xml-components";
 
 export enum UnderlineType {
@@ -21,6 +22,7 @@ export enum UnderlineType {
     WAVYDOUBLE = "wavyDouble",
 }
 
+@RegisterXmlComponent("Underline")
 export class Underline extends XmlComponent {
     constructor(underlineType: UnderlineType = UnderlineType.SINGLE, color?: string) {
         super("w:u");

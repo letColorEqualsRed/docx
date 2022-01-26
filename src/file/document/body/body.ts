@@ -1,8 +1,10 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { IContext, IXmlableObject, XmlComponent } from "file/xml-components";
 
 import { Paragraph, ParagraphProperties } from "../..";
 import { ISectionPropertiesOptions, SectionProperties } from "./section-properties/section-properties";
 
+@RegisterXmlComponent("Body")
 export class Body extends XmlComponent {
     private readonly sections: SectionProperties[] = [];
 

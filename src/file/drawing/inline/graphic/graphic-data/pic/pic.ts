@@ -1,5 +1,6 @@
 // http://officeopenxml.com/drwPic.php
 import { IMediaData, IMediaDataTransformation } from "file/media";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { BlipFill } from "./blip/blip-fill";
@@ -7,6 +8,7 @@ import { NonVisualPicProperties } from "./non-visual-pic-properties/non-visual-p
 import { PicAttributes } from "./pic-attributes";
 import { ShapeProperties } from "./shape-properties/shape-properties";
 
+@RegisterXmlComponent("Pic")
 export class Pic extends XmlComponent {
     constructor(mediaData: IMediaData, transform: IMediaDataTransformation) {
         super("pic:pic");

@@ -1,5 +1,6 @@
 // http://officeopenxml.com/drwSp-SpPr.php
 import { IMediaDataTransformation } from "file/media";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { Form } from "./form";
 // import { NoFill } from "./no-fill";
@@ -7,6 +8,7 @@ import { Form } from "./form";
 import { PresetGeometry } from "./preset-geometry/preset-geometry";
 import { ShapePropertiesAttributes } from "./shape-properties-attributes";
 
+@RegisterXmlComponent("ShapeProperties")
 export class ShapeProperties extends XmlComponent {
     private readonly form: Form;
 

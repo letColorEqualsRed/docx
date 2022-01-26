@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { Attributes, XmlComponent } from "file/xml-components";
 
 import { hpsMeasureValue } from "../values";
@@ -12,6 +13,7 @@ import { hpsMeasureValue } from "../values";
 // <xsd:complexType name="CT_OnOff">
 //     <xsd:attribute name="val" type="s:ST_OnOff"/>
 // </xsd:complexType>
+@RegisterXmlComponent("OnOffElement")
 export class OnOffElement extends XmlComponent {
     constructor(name: string, val: boolean | undefined = true) {
         super(name);
@@ -26,6 +28,7 @@ export class OnOffElement extends XmlComponent {
 // <xsd:complexType name="CT_HpsMeasure">
 //     <xsd:attribute name="val" type="ST_HpsMeasure" use="required"/>
 // </xsd:complexType>
+@RegisterXmlComponent("HpsMeasureElement")
 export class HpsMeasureElement extends XmlComponent {
     constructor(name: string, val: number | string) {
         super(name);
@@ -38,6 +41,7 @@ export class HpsMeasureElement extends XmlComponent {
 // <xsd:complexType name="CT_String">
 //     <xsd:attribute name="val" type="s:ST_String" use="required"/>
 // </xsd:complexType>
+@RegisterXmlComponent("StringValueElement")
 export class StringValueElement extends XmlComponent {
     constructor(name: string, val: string) {
         super(name);
@@ -46,6 +50,7 @@ export class StringValueElement extends XmlComponent {
 }
 
 // This represents various number element types.
+@RegisterXmlComponent("NumberValueElement")
 export class NumberValueElement extends XmlComponent {
     constructor(name: string, val: number) {
         super(name);
@@ -57,6 +62,7 @@ export class NumberValueElement extends XmlComponent {
 //
 // new StringContainer("hello", "world")
 // <hello>world</hello>
+@RegisterXmlComponent("StringContainer")
 export class StringContainer extends XmlComponent {
     constructor(name: string, val: string) {
         super(name);

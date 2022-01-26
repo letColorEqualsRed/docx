@@ -1,4 +1,5 @@
 import { Paragraph } from "file/paragraph";
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { FootnoteAttributes } from "./footnote-attributes";
@@ -15,6 +16,7 @@ export interface IFootnoteOptions {
     readonly children: Paragraph[];
 }
 
+@RegisterXmlComponent("Footnote")
 export class Footnote extends XmlComponent {
     constructor(options: IFootnoteOptions) {
         super("w:footnote");

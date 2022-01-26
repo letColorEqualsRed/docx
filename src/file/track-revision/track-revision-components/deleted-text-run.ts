@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 
 import { IRunOptions, RunProperties } from "../../index";
@@ -10,6 +11,7 @@ import { DeletedText } from "./deleted-text";
 
 interface IDeletedRunOptions extends IRunOptions, IChangedAttributesProperties {}
 
+@RegisterXmlComponent("DeletedTextRun")
 export class DeletedTextRun extends XmlComponent {
     protected readonly deletedTextRunWrapper: DeletedTextRunWrapper;
 

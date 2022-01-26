@@ -1,4 +1,5 @@
 // http://officeopenxml.com/drwPicFloating-position.php
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 import { Align } from "./align";
 import { HorizontalPositionRelativeFrom, IHorizontalPositionOptions } from "./floating-position";
@@ -12,6 +13,7 @@ class HorizontalPositionAttributes extends XmlAttributeComponent<{
     };
 }
 
+@RegisterXmlComponent("HorizontalPosition")
 export class HorizontalPosition extends XmlComponent {
     constructor(horizontalPosition: IHorizontalPositionOptions) {
         super("wp:positionH");

@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { RelationshipAttributes } from "./relationship-attributes";
 
@@ -22,6 +23,7 @@ export enum TargetModeType {
     EXTERNAL = "External",
 }
 
+@RegisterXmlComponent("Relationship")
 export class Relationship extends XmlComponent {
     constructor(id: string, type: RelationshipType, target: string, targetMode?: TargetModeType) {
         super("Relationship");

@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { Attributes, XmlComponent } from "file/xml-components";
 
 export enum HeadingLevel {
@@ -10,6 +11,7 @@ export enum HeadingLevel {
     TITLE = "Title",
 }
 
+@RegisterXmlComponent("Style")
 export class Style extends XmlComponent {
     constructor(styleId: string) {
         super("w:pStyle");

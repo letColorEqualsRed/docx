@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 export enum PageTextDirectionType {
@@ -9,6 +10,7 @@ class PageTextDirectionAttributes extends XmlAttributeComponent<{ readonly val: 
     protected readonly xmlKeys = { val: "w:val" };
 }
 
+@RegisterXmlComponent("PageTextDirection")
 export class PageTextDirection extends XmlComponent {
     constructor(value: PageTextDirectionType) {
         super("w:textDirection");

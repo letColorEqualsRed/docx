@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { Attributes, XmlComponent } from "file/xml-components";
 
 // <xsd:complexType name="CT_AbstractNum">
@@ -14,6 +15,7 @@ import { Attributes, XmlComponent } from "file/xml-components";
 //                     <xsd:enumeration value="hybridMultilevel"/>
 //                 </xsd:restriction>
 //             </xsd:simpleType>
+@RegisterXmlComponent("MultiLevelType")
 export class MultiLevelType extends XmlComponent {
     constructor(value: string) {
         super("w:multiLevelType");

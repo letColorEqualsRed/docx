@@ -1,5 +1,6 @@
 import { BorderElement, IBorderOptions } from "file/border";
 import { decimalNumber } from "file/values";
+import { RegisterXmlComponent } from "converter/decorators"
 import { IgnoreIfEmptyXmlComponent, XmlAttributeComponent, XmlComponent } from "file/xml-components";
 
 // <xsd:complexType name="CT_TcBorders">
@@ -65,6 +66,7 @@ class GridSpanAttributes extends XmlAttributeComponent<{ readonly val: number }>
 /**
  * GridSpan element. Should be used in a table cell. Pass the number of columns that this cell need to span.
  */
+@RegisterXmlComponent("GridSpan")
 export class GridSpan extends XmlComponent {
     constructor(value: number) {
         super("w:gridSpan");
@@ -98,6 +100,7 @@ class VerticalMergeAttributes extends XmlAttributeComponent<{ readonly val: Vert
 /**
  * Vertical merge element. Should be used in a table cell.
  */
+@RegisterXmlComponent("VerticalMerge")
 export class VerticalMerge extends XmlComponent {
     constructor(value: VerticalMergeType) {
         super("w:vMerge");
@@ -123,6 +126,7 @@ class TDirectionAttributes extends XmlAttributeComponent<{ readonly val: TextDir
 /**
  * Text Direction within a table cell
  */
+@RegisterXmlComponent("TDirection")
 export class TDirection extends XmlComponent {
     constructor(value: TextDirection) {
         super("w:textDirection");

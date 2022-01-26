@@ -1,3 +1,4 @@
+import { RegisterXmlComponent } from "converter/decorators"
 import { XmlComponent } from "file/xml-components";
 import { CustomPropertyAttributes } from "./custom-property-attributes";
 
@@ -6,6 +7,7 @@ export interface ICustomPropertyOptions {
     readonly value: string;
 }
 
+@RegisterXmlComponent("CustomProperty")
 export class CustomProperty extends XmlComponent {
     constructor(id: number, properties: ICustomPropertyOptions) {
         super("property");
@@ -20,6 +22,7 @@ export class CustomProperty extends XmlComponent {
     }
 }
 
+@RegisterXmlComponent("CustomPropertyValue")
 export class CustomPropertyValue extends XmlComponent {
     constructor(value: string) {
         super("vt:lpwstr");
